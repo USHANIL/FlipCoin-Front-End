@@ -1,0 +1,14 @@
+#footer-color{
+    color: black;
+}
+a{
+    color: black;
+    text-decoration-line: none;
+}
+
+a:hover{
+    color: #18d26e;
+}
+footer{
+    background-color: lightgrey;
+}
