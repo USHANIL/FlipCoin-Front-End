@@ -9,6 +9,8 @@ import { Account } from './account/account.component';
 import { AccountListComponent } from './account-list/account-list.component';
 import { AccountFormComponent } from './account-form/account-form.component';
 import { AccountOverviewComponent } from './account-overview/account-overview.component';
+import { FooterComponent } from './layoutComponents/footer/footer.component';
+import { HeaderComponent } from './layoutComponents/header/header.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { AccountOverviewComponent } from './account-overview/account-overview.co
     Account,
     AccountListComponent,
     AccountFormComponent,
-    AccountOverviewComponent
+    AccountOverviewComponent,
+    FooterComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

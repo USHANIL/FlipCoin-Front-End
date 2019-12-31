@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AccountListComponent } from 'src/app/account-list/account-list.component'
+import { AccountListComponent } from './account-list/account-list.component'
 import { AccountFormComponent } from './account-form/account-form.component';
 import { AccountOverviewComponent } from './account-overview/account-overview.component';
 
