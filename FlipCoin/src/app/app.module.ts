@@ -11,6 +11,8 @@ import { AccountFormComponent } from './account-form/account-form.component';
 import { AccountOverviewComponent } from './account-overview/account-overview.component';
 import { FooterComponent } from './layoutComponents/footer/footer.component';
 import { HeaderComponent } from './layoutComponents/header/header.component';
+import { LoginComponent } from './login/login.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -20,13 +22,15 @@ import { HeaderComponent } from './layoutComponents/header/header.component';
     AccountFormComponent,
     AccountOverviewComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    RouterModule
     
   ],
   providers: [AccountService],
