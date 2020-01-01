@@ -7,9 +7,11 @@ import { LoginComponent } from './login/login.component';
 import { ContactComponent } from './info/contact/contact.component';
 import { AboutUsComponent } from './info/about-us/about-us.component';
 import { HelpComponent } from './info/help/help.component';
+import { DashboardComponent } from './layoutComponents/dashboard/dashboard.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
+  { path: 'dashboard', component: DashboardComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'about', component: AboutUsComponent},
   { path: 'help', component: HelpComponent },

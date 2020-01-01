@@ -16,6 +16,7 @@ import { RouterModule } from '@angular/router';
 import { AboutUsComponent } from './info/about-us/about-us.component';
 import { ContactComponent } from './info/contact/contact.component';
 import { HelpComponent } from './info/help/help.component';
+import { DashboardComponent } from './layoutComponents/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { HelpComponent } from './info/help/help.component';
     LoginComponent,
     AboutUsComponent,
     ContactComponent,
-    HelpComponent
+    HelpComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
