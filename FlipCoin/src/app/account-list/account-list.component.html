@@ -1,6 +1,5 @@
 <h1>My Accounts</h1>
 
-<div class="main-content"></div>
 <div class="container-fluid">
     <div class="row">
         <a *ngFor="let account of accounts" routerLink="/accountsOverview/{{account.accountNumber}}">
@@ -14,14 +13,17 @@
                         </h3>
                         <p class="card-category">{{account.type}}</p>
 
-                        <small class="text">Available Balance: {{account.balance}}</small>
+                        <small class="text"></small>
                     </div>
                     <div class="card-footer white" id="card-footer" style="height: 3rem;">
 
-                        <div id="colLeft"><i class="material-icons text-blue darken-4">list</i>
+                        <div id="colLeft">Balance:
                         </div>
-                        <div id="colCenter" class="text-blue blue-darken 4">Details</div>
-                        <div id="colRight"></div>
+                        <div id="colwrap">
+                            <div id="colRight">${{account.balance}}</div>
+                            <div id="colCenter" class="text-blue blue-darken 4"></div>
+
+                        </div>
                     </div>
                 </div>
             </div>
