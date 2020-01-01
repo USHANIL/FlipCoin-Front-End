@@ -11,6 +11,10 @@ import { AccountFormComponent } from './account-form/account-form.component';
 import { AccountOverviewComponent } from './account-overview/account-overview.component';
 import { FooterComponent } from './layoutComponents/footer/footer.component';
 import { HeaderComponent } from './layoutComponents/header/header.component';
+import { BillComponent } from './bill/bill.component';
+import { BillListComponent } from './bill-list/bill-list.component';
+import { BillDetailsComponent } from './bill-details/bill-details.component';
+import { BillFormComponent } from './bill-form/bill-form.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { HeaderComponent } from './layoutComponents/header/header.component';
     AccountFormComponent,
     AccountOverviewComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    BillComponent,
+    BillListComponent,
+    BillDetailsComponent,
+    BillFormComponent
   ],
   imports: [
     BrowserModule,
