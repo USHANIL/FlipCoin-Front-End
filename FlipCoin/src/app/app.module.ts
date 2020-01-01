@@ -13,6 +13,9 @@ import { FooterComponent } from './layoutComponents/footer/footer.component';
 import { HeaderComponent } from './layoutComponents/header/header.component';
 import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
+import { AboutUsComponent } from './info/about-us/about-us.component';
+import { ContactComponent } from './info/contact/contact.component';
+import { HelpComponent } from './info/help/help.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { RouterModule } from '@angular/router';
     AccountOverviewComponent,
     FooterComponent,
     HeaderComponent,
-    LoginComponent
+    LoginComponent,
+    AboutUsComponent,
+    ContactComponent,
+    HelpComponent
   ],
   imports: [
     BrowserModule,
