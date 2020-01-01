@@ -1,0 +1,53 @@
+.card {
+    color: #000000;
+    border-color: #696969
+}
+
+.card-header {
+    background: rgb(64, 99, 58);
+    background: linear-gradient(90deg, rgba(64, 99, 58, 1) 0%, rgba(46, 99, 53, 1) 35%, rgba(16, 77, 7, 1) 64%, rgba(2, 29, 10, 1) 100%);
+    color: #eeeeee;
+}
+
+.stats {
+    list-style: none;
+    width: 100%;
+    height: 90px;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.stats>li {
+    display: inline-block;
+    width: 20%;
+    height: 100%;
+    background-color: rgb(235, 235, 235);
+}
+
+#colLeft {
+    background-color: #ffffff;
+    height: 20px;
+    float: left;
+}
+
+#colwrap {
+    overflow: hidden;
+    background-color: orange;
+}
+
+#colCenter {
+    height: 48px;
+    margin-top: 2px;
+    margin-bottom: 0px;
+}
+
+#colRight {
+    background-color: #c3d0ff;
+    height: 48px;
+    float: right;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
