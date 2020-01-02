@@ -19,6 +19,7 @@ import { HelpComponent } from './info/help/help.component';
 import { DashboardComponent } from './layoutComponents/dashboard/dashboard.component';
 import { HttpInterceptorService } from './services/http-interceptor.service';
 import { LoggedInContainerComponent } from './postLogComponents/logged-in-container/logged-in-container.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { LoggedInContainerComponent } from './postLogComponents/logged-in-contai
     ContactComponent,
     HelpComponent,
     DashboardComponent,
-    LoggedInContainerComponent
+    LoggedInContainerComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
