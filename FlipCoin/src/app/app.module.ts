@@ -20,6 +20,7 @@ import { DashboardComponent } from './layoutComponents/dashboard/dashboard.compo
 import { HttpInterceptorService } from './services/http-interceptor.service';
 import { LoggedInContainerComponent } from './postLogComponents/logged-in-container/logged-in-container.component';
 import { RegisterComponent } from './register/register.component';
+import { NotesComponent } from './postLogComponents/notes/notes.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { RegisterComponent } from './register/register.component';
     HelpComponent,
     DashboardComponent,
     LoggedInContainerComponent,
-    RegisterComponent
+    RegisterComponent,
+    NotesComponent
   ],
   imports: [
     BrowserModule,
