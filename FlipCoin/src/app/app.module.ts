@@ -13,21 +13,17 @@ import { FooterComponent } from './layoutComponents/footer/footer.component';
 import { HeaderComponent } from './layoutComponents/header/header.component';
 import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
-<<<<<<< HEAD
 import { BillComponent } from './bill/bill.component';
 import { BillListComponent } from './bill-list/bill-list.component';
 import { BillDetailsComponent } from './bill-details/bill-details.component';
 import { BillFormComponent } from './bill-form/bill-form.component';
-
-
-=======
 import { AboutUsComponent } from './info/about-us/about-us.component';
 import { ContactComponent } from './info/contact/contact.component';
 import { HelpComponent } from './info/help/help.component';
 import { DashboardComponent } from './layoutComponents/dashboard/dashboard.component';
 import { HttpInterceptorService } from './services/http-interceptor.service';
 import { LoggedInContainerComponent } from './postLogComponents/logged-in-container/logged-in-container.component';
->>>>>>> dev
+
 
 @NgModule({
   declarations: [
@@ -39,18 +35,15 @@ import { LoggedInContainerComponent } from './postLogComponents/logged-in-contai
     FooterComponent,
     HeaderComponent,
     LoginComponent,
-<<<<<<< HEAD
     BillComponent,
     BillListComponent,
     BillDetailsComponent,
-    BillFormComponent
-=======
+    BillFormComponent,
     AboutUsComponent,
     ContactComponent,
     HelpComponent,
     DashboardComponent,
     LoggedInContainerComponent
->>>>>>> dev
   ],
   imports: [
     BrowserModule,
