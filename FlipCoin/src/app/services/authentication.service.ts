@@ -31,6 +31,11 @@ export class AuthenticationService {
     let user = sessionStorage.getItem('username');
     return !(user === null);
   }
+  
+  getUser(){
+    let user: string = sessionStorage.getItem('username');
+    return user;
+  }
 
   logOut() {
     sessionStorage.removeItem('username');

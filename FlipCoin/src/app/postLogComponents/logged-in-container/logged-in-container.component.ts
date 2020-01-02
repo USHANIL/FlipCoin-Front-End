@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'app/services/user.service';
+import { User } from 'app/models/user';
+import { AuthenticationService } from 'app/services/authentication.service';
 
 @Component({
   selector: 'app-logged-in-container',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoggedInContainerComponent implements OnInit {
 
-  constructor() { }
+  user: User;
+
+  constructor(private userService: UserService, private authenticate: AuthenticationService) { }
 
   ngOnInit() {
+    this.userService.getUser(this.authenticate.getUser()).subscribe(data => this.user = data);
   }
 
 }
