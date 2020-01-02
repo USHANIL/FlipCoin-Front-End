@@ -11,7 +11,11 @@ export class HttpInterceptorService  implements HttpInterceptor{
     if(sessionStorage.getItem('username') && sessionStorage.getItem('token')){
       req = req.clone({
         setHeaders: {
-          Authorization: sessionStorage.getItem('token')
+          Authorization: sessionStorage.getItem('token'),
+          'Access-Control-Allow-Origin' : '*',
+          'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
+          'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
+          'Content-Type': 'application/json'
         }
       })
     }
