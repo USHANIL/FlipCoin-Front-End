@@ -43,12 +43,11 @@ import { NotesComponent } from './postLogComponents/notes/notes.component';
     DashboardComponent,
     LoggedInContainerComponent,
     RegisterComponent,
-<<<<<<< HEAD
+
     TransactionsComponent,
-    TransactionListComponent
-=======
+    TransactionListComponent,
     NotesComponent
->>>>>>> dev
+
   ],
   imports: [
     BrowserModule,
