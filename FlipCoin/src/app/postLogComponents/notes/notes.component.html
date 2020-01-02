@@ -1,0 +1,31 @@
+<div class="container overflow-auto">
+    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        New List
+    </button>
+
+
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+        <form #it="ngForm" (ngSubmit)="saveNote()">
+            <div class="form-group">
+                <textarea class="form-control" type="text" rows="4" name="note" [(ngModel)]="newNote.note" #note="ngModel"
+                    placeholder="Type note here" required></textarea>
+            </div>
+            <!-- work with posting a note -->
+            <button type="submit" [disabled]="!it.form.valid" class="btn btn-dark">Submit</button>
+        </form>
+
+    </div>
+
+    <ul class="list-group list-group-flush">
+        <li *ngFor="let note of notes" class="list-group-item text-right">
+            <p style="font-size: 10px;"> {{ note.noteDate}}</p>
+            <p style="font-size:12px">{{ note.note }}</p>
+            <!-- deletes note from list -->
+            <button class="btn btn-sm " (click)="deleteNote(note.noteId)" type="button"
+                style="font-size:12px">Remove</button>
+            <hr style="margin: 0 15%; border-top-color: #18d26e;">
+        </li>
+    </ul>
+</div>
