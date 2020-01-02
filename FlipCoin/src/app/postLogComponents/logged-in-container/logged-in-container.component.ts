@@ -10,7 +10,7 @@ import { AuthenticationService } from 'app/services/authentication.service';
 })
 export class LoggedInContainerComponent implements OnInit {
 
-  user: User;
+  user: User = new User();
 
   constructor(
     private userService: UserService, 
@@ -18,7 +18,8 @@ export class LoggedInContainerComponent implements OnInit {
     ) { }
 
   ngOnInit() {
-    this.userService.getUser(this.authenticate.getUser()).subscribe(data => this.user = data);
+    this.userService.getUser(this.authenticate.getUser()).subscribe( e => this.user = e);
+    
   }
 
 }
