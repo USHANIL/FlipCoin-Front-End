@@ -22,7 +22,7 @@ export class TransactionListByAccountComponent implements OnInit {
   }
 
   getTransactions(): void {
-    const id = + this.route.snapshot.paramMap.get('accountNumber');
+    const id = + this.route.snapshot.paramMap.get('accountId');
     this.transactionService.getTransactions(id).subscribe(data => this.transactions = data);
   }
 

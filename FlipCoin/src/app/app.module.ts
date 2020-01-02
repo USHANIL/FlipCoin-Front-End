@@ -45,7 +45,7 @@ import { TransactionListByAccountComponent } from './transaction-list-by-account
     LoggedInContainerComponent,
     RegisterComponent,
 
-    //TransactionsComponent,
+
     Transactions,
     TransactionListComponent,
     NotesComponent,

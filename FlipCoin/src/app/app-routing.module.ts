@@ -26,7 +26,7 @@ const routes: Routes = [
   { path: 'accounts', component: AccountListComponent },
   { path: 'addaccounts', component: AccountFormComponent },
   { path: 'accountsOverview/:accountId', component: AccountOverviewComponent},
-  { path: 'accounts/:accountNumber/transactions', component: TransactionListByAccountComponent}
+  { path: 'accounts/:accountId/transactions', component: TransactionListByAccountComponent}
   
   
  
