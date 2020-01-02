@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { TransactionsComponent } from 'app/transactions/transactions.component';
-import { TransactionService } from 'app/services/transaction-service';
-import { Router } from '@angular/router';
+import { Transactions } from 'app/transactions/transactions.component';
+import { TransactionService } from 'app/services/transaction-service.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-transaction-list',
@@ -10,13 +10,20 @@ import { Router } from '@angular/router';
 })
 export class TransactionListComponent implements OnInit {
 
-  transaction: TransactionsComponent[];
+  transaction: Transactions[];
+  id = + this.route.snapshot.paramMap.get('accountNumber');
 
-  constructor(private transactionService: TransactionService, private router: Router) { }
+  constructor(private transactionService: TransactionService,
+    private route: ActivatedRoute, 
+    private router: Router) { }
 
   ngOnInit() {
-    this.transactionService.getTransactions()
+    this.transactionService.getTransactions(this.id)
     .subscribe(data => {this.transaction = data});
+  }
+
+  goToTransactionsList() {
+    this.router.navigate(['transaction']);
   }
 
 }

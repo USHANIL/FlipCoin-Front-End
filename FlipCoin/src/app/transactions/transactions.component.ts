@@ -5,8 +5,9 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './transactions.component.html',
   styleUrls: ['./transactions.component.css']
 })
-export class TransactionsComponent implements OnInit {
+export class Transactions implements OnInit {
   transactionId: number;
+  userId: number
   accountNumber: number;
   amount: number;
   type: string;
@@ -15,6 +16,10 @@ export class TransactionsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  getAccountNumber() {
+    return this.accountNumber;
   }
 
 }

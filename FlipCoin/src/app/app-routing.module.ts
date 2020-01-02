@@ -9,6 +9,7 @@ import { AboutUsComponent } from './info/about-us/about-us.component';
 import { HelpComponent } from './info/help/help.component';
 import { LoggedInContainerComponent } from './postLogComponents/logged-in-container/logged-in-container.component';
 import { RegisterComponent } from './register/register.component';
+import { TransactionListByAccountComponent } from './transaction-list-by-account/transaction-list-by-account.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -19,7 +20,8 @@ const routes: Routes = [
   { path: 'help', component: HelpComponent },
   { path: 'accounts', component: AccountListComponent },
   { path: 'addaccounts', component: AccountFormComponent },
-  { path: 'accountsOverview/:accountId', component: AccountOverviewComponent}
+  { path: 'accountsOverview/:accountId', component: AccountOverviewComponent},
+  { path: 'accounts/:accountNumber/transactions', component: TransactionListByAccountComponent}
   
   
  
