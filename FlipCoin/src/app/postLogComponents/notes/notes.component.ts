@@ -12,7 +12,6 @@ import { NotesService } from 'app/services/notes.service';
 })
 export class NotesComponent implements OnInit {
 
-  user: User;
   newNote: Notes = new Notes();
   notes = []
 
@@ -24,21 +23,19 @@ export class NotesComponent implements OnInit {
 
 
   ngOnInit() {
-    this.getUser();
-    this.noteService.getNotes(this.user.userId).subscribe(data => this.notes = data);
+    
+    this.noteService.getNotes().subscribe(data => this.notes = data);
   }
 
   saveNote() {
-    this.noteService.save(this.newNote, this.user.userId).subscribe(data => this.ngOnInit());
+    this.noteService.save(this.newNote).subscribe(data => this.ngOnInit());
   }
 
   deleteNote(id){
     this.noteService.removeNotes(id).subscribe((data) => this.ngOnInit());
   }
 
-  getUser(){
-    this.userService.getUser(this.authenticate.getUser()).subscribe(data => this.user = data);
-  }
+  
 
 
 
