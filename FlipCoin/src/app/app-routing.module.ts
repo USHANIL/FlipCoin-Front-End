@@ -9,11 +9,13 @@ import { AboutUsComponent } from './info/about-us/about-us.component';
 import { HelpComponent } from './info/help/help.component';
 import { LoggedInContainerComponent } from './postLogComponents/logged-in-container/logged-in-container.component';
 import { RegisterComponent } from './register/register.component';
+import { NotesComponent } from './postLogComponents/notes/notes.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'logged-in', component: LoggedInContainerComponent },
   { path: 'registration', component: RegisterComponent},
+  { path: 'notes', component: NotesComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'about', component: AboutUsComponent},
   { path: 'help', component: HelpComponent },

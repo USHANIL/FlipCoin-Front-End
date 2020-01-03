@@ -7,3 +7,7 @@ button:hover{
     background-color: lightgrey;
     color: #18d26e;
 }
+.container{
+    display: block;
+
+}

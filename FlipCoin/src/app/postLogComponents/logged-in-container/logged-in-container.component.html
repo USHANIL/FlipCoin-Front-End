@@ -1,6 +1,6 @@
 <div class="container" id="welcomeBox">
     <p class="welcome">Welcome back, {{user.firstName}} {{user.lastName}}</p>
-    <p class="lastLogin">Last login, {{user.lastLogin}} </p>
+    <p class="lastLogin">Last login, {{user.lastLogin | date : 'medium' }} </p> 
 </div>
 <div class="container-fluid">
     <div class="row">
@@ -10,8 +10,5 @@
         <div class="col-8">
                 sdfsdf
         </div>
-        
-        <app-notes class="container col"></app-notes>
-        
     </div>
 </div>
