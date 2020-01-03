@@ -29,8 +29,8 @@ export class AccountService {
   public remove(id: Number) {
     return this.http.delete<Account[]>(this.accountsUrl + '/accounts/'+ id);
   }
-  public getAccountsByUserId(accountNumber: number): Observable<Account> {
-    return this.http.get<Account>(this.accountsUrl+'/user/{userId}/accounts'
+  public getAccountsByUserId(userId: number): Observable<Account[]> {
+    return this.http.get<Account[]>(this.accountsUrl+'/user/{userId}/accounts'
     );
 }
 }
