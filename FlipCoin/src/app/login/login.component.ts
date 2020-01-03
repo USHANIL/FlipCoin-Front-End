@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { AuthenticationService } from 'app/services/authentication.service';
 import { Login } from 'app/models/login';
+import { UserService } from 'app/services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -22,7 +23,7 @@ export class LoginComponent implements OnInit {
   }
   loginForm(){
     this.authenticate.authenticate(this.login.username, this.login.password)
-                    .subscribe( result => this.router.navigate(['/logged-in']));          
+                    .subscribe( result => this.router.navigate(['/logged-in'])); 
     // console.log(this.login.username + "  " + this.login.password)
   }
 
