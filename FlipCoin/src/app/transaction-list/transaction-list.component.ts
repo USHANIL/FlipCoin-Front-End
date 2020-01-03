@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Transactions } from 'app/transactions/transactions.component';
 import { TransactionService } from 'app/services/transaction-service.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import { Observable } from "rxjs";
 
 @Component({
   selector: 'app-transaction-list',
@@ -10,7 +11,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class TransactionListComponent implements OnInit {
 
-  transaction: Transactions[];
+  transaction: Observable<Transactions[]>;
   id = + this.route.snapshot.paramMap.get('accountNumber');
 
   constructor(private transactionService: TransactionService,
@@ -18,12 +19,13 @@ export class TransactionListComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit() {
-    this.transactionService.getTransactions(this.id)
-    .subscribe(data => {this.transaction = data});
+    //this.goToTransactionsList();
+    // this.transactionService.getTransactions(this.id)
+    // .subscribe(data => {this.transaction = data});
   }
 
   goToTransactionsList() {
-    this.router.navigate(['transaction']);
+    this.router.navigate(['transactions']);
   }
 
 }

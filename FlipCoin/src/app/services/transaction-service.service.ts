@@ -23,12 +23,12 @@ export class TransactionService {
         return this.http.get<Transactions[ ]>(this.transactionsUrl + '/accounts/' + accountId + '/transactions');
     }
 
-    public getTop5TransactionsAccount(): Observable<Transactions[]> {
-        return this.http.get<Transactions[ ]>(this.urlAccount);
+    public getTop5TransactionsAccount(accountId: number): Observable<Transactions[]> {
+        return this.http.get<Transactions[ ]>(this.transactionsUrl + '/accounts/' + accountId + '/top_5_transactions');
     }
 
-    public getTop5TransactionsUser(): Observable<Transactions[]> {
-        return this.http.get<Transactions[ ]>(this.urlUser);
-    }
+    // public getTop5TransactionsUser(): Observable<Transactions[]> {
+    //     return this.http.get<Transactions[ ]>(this.transactionsUrl + '/user/' + userId + '/most_recent_transactions');
+    // }
 
 }

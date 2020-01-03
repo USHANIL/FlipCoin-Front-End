@@ -9,11 +9,11 @@
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let transaction of transactions">
+        <tr *ngFor="let transaction of transactions | async">
           <td>{{ transaction.date }}</td>
           <td>{{ transaction.type }}</td>
           <td>{{ transaction.amount }}</td>
-          <td><a href="mailto:{{ transaction.type }}">{{ transaction.type }}</a></td>
+          <td><button (click)="transactionDetails(transaction.id)" class="btn btn-info" style="margin-left: 10px">Transaction Details</button>></td>
         </tr>
         </tbody>
       </table>
