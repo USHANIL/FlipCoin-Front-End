@@ -20,6 +20,7 @@ const routes: Routes = [
   { path: 'about', component: AboutUsComponent},
   { path: 'help', component: HelpComponent },
   { path: 'accounts', component: AccountListComponent },
+  { path: 'user/:userId/accounts', component: AccountListComponent},
   { path: 'addaccounts', component: AccountFormComponent },
   { path: 'accountsOverview/:accountId', component: AccountOverviewComponent}
 ];

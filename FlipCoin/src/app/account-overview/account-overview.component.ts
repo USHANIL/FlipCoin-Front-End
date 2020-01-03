@@ -22,7 +22,6 @@ export class AccountOverviewComponent implements OnInit {
   ngOnInit() {
     this.getAccount()
   }
-
   getAccount(): void {
     const id = +this.route.snapshot.paramMap.get('accountId');
     this.accountService.getAccountById(id).subscribe(account => this.account = account)
