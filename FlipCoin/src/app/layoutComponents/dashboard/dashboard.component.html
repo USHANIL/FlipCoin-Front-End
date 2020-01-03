@@ -1,23 +1,24 @@
 <div class="headerContainer">
-        <header id="header">
-            <div class="container">
-    
-                <div id="logo" class="pull-left">
-                    <h1><a href="#intro" class="scrollto">Flip Coin</a></h1>
-                    <a href="#intro"><img src="img/logo.png" alt="" title="" /></a>
-                </div>
-    
-                <nav id="nav-menu-container grey">
-                    <ul class="nav-menu">
-                        <li><a routerLink="/login" (click)="logout()">Log Out</a></li>
-                        <li><a routerLink="/notes">Lists</a></li>
-                        <li><a routerLink="">Transaction</a></li>
-                        <li><a routerLink="">Account</a></li>
-                        <li><a routerLink="">Profile</a></li>
-                        <li><a routerLink="/logged-in">Home</a></li>
-                    </ul>
-                </nav>
-    
+    <header id="header">
+        <div class="container">
+
+            <div id="logo" class="pull-left">
+                <h1><a href="#intro" class="scrollto">Flip Coin</a></h1>
+                <a href="#intro"><img src="img/logo.png" alt="" title="" /></a>
             </div>
-        </header>
-    </div>
+
+            <nav id="nav-menu-container grey">
+                <ul class="nav-menu">
+                    <li><a routerLink="/login" (click)="logout()">Log Out</a></li>
+                    <li><a routerLink="/notes">Lists</a></li>
+                    <li><a routerLink="">Transaction</a></li>
+                    <li><a routerLink="/user/{{userId}}/accounts">Account</a></li>
+                    <li><a routerLink="">Bill Tracking</a></li>
+                    <li><a routerLink="">Profile</a></li>
+                    <li><a routerLink="/logged-in">Home</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+</div>

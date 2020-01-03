@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Account } from '../account/account.component'
 import { AccountService } from '../services/account-service.service'
 import { ActivatedRoute, Router } from '@angular/router';
 import { identifierModuleUrl } from '@angular/compiler';
+import { User } from 'app/services/authentication.service';
 
 
 @Component({
@@ -11,7 +12,8 @@ import { identifierModuleUrl } from '@angular/compiler';
   styleUrls: ['./account-list.component.css']
 })
 export class AccountListComponent implements OnInit {
-  
+
+  @Input() user: User;
   accounts: Account[];
   selectedAccount:Account;
 
@@ -22,7 +24,13 @@ export class AccountListComponent implements OnInit {
     ) { }
 
   ngOnInit() {
+    //this.getUserAccounts();
     this.accountService.findAll().subscribe(data => {this.accounts = data;
+    });
+  }
+  getUserAccounts()  {
+    const id = +this.route.snapshot.paramMap.get('userId');
+    this.accountService.getAccountsByUserId(id).subscribe(data => {this.accounts = data;
     });
   }
   remove(id : Number){
