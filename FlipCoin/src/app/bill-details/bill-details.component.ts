@@ -30,6 +30,7 @@ export class BillDetailsComponent implements OnInit {
   }
   gotoBillsList() {
     this.router.navigateByUrl('bills');
+    
   }
 
 }
