@@ -20,10 +20,6 @@ const routes: Routes = [
   { path: 'accounts', component: AccountListComponent },
   { path: 'addaccounts', component: AccountFormComponent },
   { path: 'accountsOverview/:accountId', component: AccountOverviewComponent}
-  
-  
- 
-  
 ];
 
 @NgModule({
