@@ -20,7 +20,7 @@
 
     <ul class="list-group list-group-flush">
         <li *ngFor="let note of notes" class="list-group-item text-right">
-            <p style="font-size: 10px;"> {{ note.noteDate}}</p>
+            <p style="font-size: 10px;"> {{note.noteDate | date : 'mediumDate' }}</p>
             <p style="font-size:12px">{{ note.note }}</p>
             <!-- deletes note from list -->
             <button class="btn btn-sm " (click)="deleteNote(note.noteId)" type="button"

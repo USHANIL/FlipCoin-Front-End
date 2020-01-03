@@ -14,12 +14,13 @@ export class LoggedInContainerComponent implements OnInit {
 
   constructor(
     private userService: UserService, 
-    private authenticate: AuthenticationService,
+    private authenticate: AuthenticationService
     ) { }
 
   ngOnInit() {
-    this.userService.getUser(this.authenticate.getUser()).subscribe( e => this.user = e);
-    
+    this.userService.getUser(this.authenticate.getUser()).subscribe(e => this.user = e);
+    this.userService.getUserId(this.authenticate.getUser()).subscribe();
   }
+  
 
 }
