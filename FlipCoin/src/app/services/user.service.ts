@@ -13,10 +13,10 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  getUser(username: string) {
+  getUser(username: string) :Observable<any>{
     return this.http.get<any>(this.url + "user/get/" +username);
     } 
-  getUserId(username: string){
+  getUserId(username: string): Observable<any>{
     return this.http.get<any>(this.url + "user/get/" + username).pipe(map(
       userData => {
         sessionStorage.setItem('userId', userData.userId);

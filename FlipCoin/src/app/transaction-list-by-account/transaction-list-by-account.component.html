@@ -9,11 +9,11 @@
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let transaction of transactions | async">
-          <td>{{ transaction.date }}</td>
+        <tr *ngFor="let transaction of transactions" routerLink="transactions">
+          <td>{{ transaction.transactionDate | date: 'MM/dd/yyy' }}</td>
           <td>{{ transaction.type }}</td>
-          <td>{{ transaction.amount }}</td>
-          <td><button (click)="transactionDetails(transaction.id)" class="btn btn-info" style="margin-left: 10px">Transaction Details</button>></td>
+          <td>${{ transaction.amount }}</td>
+          <!-- <td><button (click)="transactionDetails(transaction.id)" class="btn btn-info" style="margin-left: 10px">Transaction Details</button>></td> -->
         </tr>
         </tbody>
       </table>

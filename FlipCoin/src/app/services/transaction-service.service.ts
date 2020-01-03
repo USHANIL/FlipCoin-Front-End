@@ -15,7 +15,6 @@ export class TransactionService {
 
     constructor(private http: HttpClient) {
         this.transactionsUrl = 'http://localhost:8080/API';
-        this.urlAccount = 'http://localhost:8080/accounts/3/top_5_transactions';
         this.urlUser = 'http://localhost:8080/user/2/most_recent_transactions';
     }
 

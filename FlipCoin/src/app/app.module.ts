@@ -13,6 +13,10 @@ import { FooterComponent } from './layoutComponents/footer/footer.component';
 import { HeaderComponent } from './layoutComponents/header/header.component';
 import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
+import { BillComponent } from './bill/bill.component';
+import { BillListComponent } from './bill-list/bill-list.component';
+import { BillDetailsComponent } from './bill-details/bill-details.component';
+import { BillFormComponent } from './bill-form/bill-form.component';
 import { AboutUsComponent } from './info/about-us/about-us.component';
 import { ContactComponent } from './info/contact/contact.component';
 import { HelpComponent } from './info/help/help.component';
@@ -28,6 +32,7 @@ import { NotesComponent } from './postLogComponents/notes/notes.component';
 import { TransactionListByAccountComponent } from './transaction-list-by-account/transaction-list-by-account.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +43,10 @@ import { TransactionListByAccountComponent } from './transaction-list-by-account
     FooterComponent,
     HeaderComponent,
     LoginComponent,
+    BillComponent,
+    BillListComponent,
+    BillDetailsComponent,
+    BillFormComponent,
     AboutUsComponent,
     ContactComponent,
     HelpComponent,
