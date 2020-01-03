@@ -9,7 +9,11 @@ import { AboutUsComponent } from './info/about-us/about-us.component';
 import { HelpComponent } from './info/help/help.component';
 import { LoggedInContainerComponent } from './postLogComponents/logged-in-container/logged-in-container.component';
 import { RegisterComponent } from './register/register.component';
+
+import { TransactionListByAccountComponent } from './transaction-list-by-account/transaction-list-by-account.component';
+
 import { NotesComponent } from './postLogComponents/notes/notes.component';
+
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -22,7 +26,16 @@ const routes: Routes = [
   { path: 'accounts', component: AccountListComponent },
   { path: 'user/:userId/accounts', component: AccountListComponent},
   { path: 'addaccounts', component: AccountFormComponent },
+
+  { path: 'accountsOverview/:accountId', component: AccountOverviewComponent},
+  { path: 'accounts/:accountId/transactions', component: TransactionListByAccountComponent},
+  
+  
+ 
+  
+
   { path: 'accountsOverview/:accountId', component: AccountOverviewComponent}
+
 ];
 
 @NgModule({

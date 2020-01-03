@@ -24,7 +24,13 @@ import { DashboardComponent } from './layoutComponents/dashboard/dashboard.compo
 import { HttpInterceptorService } from './services/http-interceptor.service';
 import { LoggedInContainerComponent } from './postLogComponents/logged-in-container/logged-in-container.component';
 import { RegisterComponent } from './register/register.component';
+
+import { Transactions } from './transactions/transactions.component';
+import { TransactionListComponent } from './transaction-list/transaction-list.component';
+
 import { NotesComponent } from './postLogComponents/notes/notes.component';
+import { TransactionListByAccountComponent } from './transaction-list-by-account/transaction-list-by-account.component';
+
 
 
 @NgModule({
@@ -47,7 +53,13 @@ import { NotesComponent } from './postLogComponents/notes/notes.component';
     DashboardComponent,
     LoggedInContainerComponent,
     RegisterComponent,
-    NotesComponent
+
+
+    Transactions,
+    TransactionListComponent,
+    NotesComponent,
+    TransactionListByAccountComponent
+
   ],
   imports: [
     BrowserModule,
