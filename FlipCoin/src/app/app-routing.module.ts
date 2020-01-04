@@ -13,6 +13,7 @@ import { RegisterComponent } from './register/register.component';
 import { TransactionListByAccountComponent } from './transaction-list-by-account/transaction-list-by-account.component';
 
 import { NotesComponent } from './postLogComponents/notes/notes.component';
+import { TransactionListTopByUserComponent } from './transaction-list-top-by-user/transaction-list-top-by-user.component';
 
 
 const routes: Routes = [
@@ -29,6 +30,7 @@ const routes: Routes = [
 
   { path: 'accountsOverview/:accountId', component: AccountOverviewComponent},
   { path: 'accounts/:accountId/transactions', component: TransactionListByAccountComponent},
+  { path: 'user/:userId/transactions-user', component: TransactionListTopByUserComponent},
   
   
  

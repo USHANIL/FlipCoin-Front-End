@@ -30,6 +30,7 @@ import { TransactionListComponent } from './transaction-list/transaction-list.co
 
 import { NotesComponent } from './postLogComponents/notes/notes.component';
 import { TransactionListByAccountComponent } from './transaction-list-by-account/transaction-list-by-account.component';
+import { TransactionListTopByUserComponent } from './transaction-list-top-by-user/transaction-list-top-by-user.component';
 
 
 
@@ -56,7 +57,8 @@ import { TransactionListByAccountComponent } from './transaction-list-by-account
     Transactions,
     TransactionListComponent,
     NotesComponent,
-    TransactionListByAccountComponent
+    TransactionListByAccountComponent,
+    TransactionListTopByUserComponent
 
   ],
   imports: [

@@ -22,4 +22,12 @@ export class Transactions implements OnInit {
     return this.accountNumber;
   }
 
+  getAmount() {
+    return this.amount.toFixed(2);
+  }
+
+  getUserId() {
+    return this.userId;
+  }
+
 }
