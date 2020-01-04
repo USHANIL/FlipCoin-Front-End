@@ -53,8 +53,6 @@ import { TransactionListByAccountComponent } from './transaction-list-by-account
     DashboardComponent,
     LoggedInContainerComponent,
     RegisterComponent,
-
-
     Transactions,
     TransactionListComponent,
     NotesComponent,
