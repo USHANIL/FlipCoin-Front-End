@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AccountService } from '../services/account-service.service'
 import { Account } from '../account/account.component'
+import { TransactionListByAccountComponent } from '../transaction-list-by-account/transaction-list-by-account.component'
 import { Location } from '@angular/common';
 
 @Component({
@@ -12,15 +13,18 @@ import { Location } from '@angular/common';
 export class AccountOverviewComponent implements OnInit {
 
   @Input() account: Account;
+  
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
     private accountService: AccountService
-  ) { }
+  
+  ){}
 
   ngOnInit() {
     this.getAccount()
+    
   }
   getAccount(): void {
     const id = +this.route.snapshot.paramMap.get('accountId');
