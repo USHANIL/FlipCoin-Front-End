@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Account } from '../account/account.component';
+import { Transactions } from '../transactions/transactions.component'
 import { Observable, of } from 'rxjs'
 import { AccountListComponent } from '../account-list/account-list.component'
 @Injectable({
@@ -35,7 +36,7 @@ export class AccountService {
     return this.http.get<Account[]>(this.accountsUrl+'/user/'+id+'/accounts'
     );
 }
-  public accountDeposit(id:number,amount:number){
-    return this.http.put<Account>(this.accountsUrl+'/accounts/deposit/'+ id+"?amount=" + amount, amount);
+  public accountDeposit(id:number, transaction:Transactions){
+    return this.http.put<Account>(this.accountsUrl+'/accounts/deposit/'+ id, transaction);
   }
 }

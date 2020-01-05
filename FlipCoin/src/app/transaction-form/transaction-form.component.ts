@@ -27,6 +27,7 @@ export class TransactionFormComponent implements OnInit {
     private transactionService: TransactionService,
     
   ) {
+    this.transaction = new Transactions();
     this.tForm = this.createFormGroup();
   }
 
@@ -41,7 +42,7 @@ export class TransactionFormComponent implements OnInit {
   onSubmit(){
     this.accountService.accountDeposit(
       this.tForm.controls['accountId'].value,
-      this.tForm.controls['amount'].value
+      this.transaction
       ).subscribe(data => this.gotoAccountsList());
   }
   createFormGroup(){
