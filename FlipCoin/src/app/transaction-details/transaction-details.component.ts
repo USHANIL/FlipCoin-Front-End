@@ -32,7 +32,7 @@ export class TransactionDetailsComponent implements OnInit {
 
   list(){
     const id = + this.route.snapshot.paramMap.get('accountId');
-    this.router.navigate(['accountsOverview/' + id]);
+    this.router.navigate(['accounts']);
   }
 
 }

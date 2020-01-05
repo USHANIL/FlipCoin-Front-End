@@ -1,20 +1,44 @@
-<h2>Transaction Details</h2> 
+<div class="container">
 
-<hr/>
-<div *ngIf="transaction">
-  <div>
-    <label><b>Transaction ID: </b></label> {{transaction.transactionId}}
-  </div>  
-  <div>
-    <label><b>Transaction Date: </b></label> {{transaction.transactionDate}}
-  </div>
-  <div>
-    <label><b>Description: </b></label> {{transaction.type}}
-  </div>
-  <div>
-    <label><b>Amount: </b></label> {{transaction.amount}}
-  </div> 
-</div>
+  <body>
+      <div *ngIf="transaction">
+
+          <h2>Transaction Details</h2>
+          <div class="d-flex">
+              <div>
+                  Transaction ID:
+              </div>
+              <div class="ml-auto">
+                  <p class="font-italic">
+                      {{transaction.transactionId}}
+                  </p>
+              </div>
+          </div>
+          <div class="d-flex">
+              <div>
+                  Transaction Date:
+              </div>
+              <div class="ml-auto">
+                  {{transaction.transactionDate}}
+              </div>
+          </div>
+          <div class="d-flex">
+            <div>
+                Description:
+            </div>
+            <div class="ml-auto">
+                {{transaction.type}}
+            </div>
+        </div>
+        <div class="d-flex">
+          <div>
+              Amount:
+          </div>
+          <div class="ml-auto">
+              {{transaction.amount}}
+          </div>
+      </div>
+      </div>
 
 
 <br>
