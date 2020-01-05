@@ -28,7 +28,10 @@ import { Transactions } from './transactions/transactions.component';
 import { TransactionListComponent } from './transaction-list/transaction-list.component';
 import { NotesComponent } from './postLogComponents/notes/notes.component';
 import { TransactionListByAccountComponent } from './transaction-list-by-account/transaction-list-by-account.component';
-import { TransactionFormComponent } from './transaction-form/transaction-form.component';
+import { DepositFormComponent } from './deposit-form/deposit-form.component';
+import { MakeTransactionComponent } from './make-transaction/make-transaction.component';
+import { WithdrawFormComponent } from './withdraw-form/withdraw-form.component';
+import { TransferFormComponent } from './transfer-form/transfer-form.component';
 
 
 
@@ -56,7 +59,10 @@ import { TransactionFormComponent } from './transaction-form/transaction-form.co
     TransactionListComponent,
     NotesComponent,
     TransactionListByAccountComponent,
-    TransactionFormComponent
+    DepositFormComponent,
+    MakeTransactionComponent,
+    WithdrawFormComponent,
+    TransferFormComponent
 
   ],
   imports: [

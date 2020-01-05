@@ -36,7 +36,17 @@ export class AccountService {
     return this.http.get<Account[]>(this.accountsUrl+'/user/'+id+'/accounts'
     );
 }
-  public accountDeposit(id:number, transaction:Transactions){
-    return this.http.put<Account>(this.accountsUrl+'/accounts/deposit/'+ id, transaction);
+  public accountDeposit(transaction:Transactions){
+    return this.http.put<Account>(this.accountsUrl+'/accounts/deposit/',transaction);
   }
+  public accountWithdraw(transaction:Transactions){
+    return this.http.put<Account>(this.accountsUrl+'/accounts/withdraw/',transaction);
+  }
+  public tranferTo(transaction:Transactions){
+    return this.http.put<Account>(this.accountsUrl+'/accounts/transferTo/',transaction);
+  }
+  public tranferFrom(transaction:Transactions){
+    return this.http.put<Account>(this.accountsUrl+'/accounts/transferFrom/',transaction);
+  }
+  
 }
