@@ -63,23 +63,18 @@ import { TransferFormComponent } from './transfer-form/transfer-form.component';
     TransactionListComponent,
     NotesComponent,
     TransactionListByAccountComponent,
-<<<<<<< HEAD
     DepositFormComponent,
     MakeTransactionComponent,
     WithdrawFormComponent,
     TransferFormComponent,
-    
-=======
     UserProfileComponent,
     UserProfileFormComponent,
     DepositFormComponent,
     MakeTransactionComponent,
     WithdrawFormComponent,
     TransferFormComponent
-
-
->>>>>>> 91e712e29aa29305512588ac7b870b29226ec926
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,
