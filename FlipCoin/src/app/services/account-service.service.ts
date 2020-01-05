@@ -35,4 +35,7 @@ export class AccountService {
     return this.http.get<Account[]>(this.accountsUrl+'/user/'+id+'/accounts'
     );
 }
+  public accountDeposit(id:number,amount:number){
+    return this.http.put<Account>(this.accountsUrl+'/accounts/deposit/'+ id+"?amount=" + amount, amount);
+  }
 }
