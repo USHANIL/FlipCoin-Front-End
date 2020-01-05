@@ -5,7 +5,6 @@ import { Observable } from 'rxjs';
 import { AuthenticationService } from './authentication.service';
 import { User } from 'app/models/user';
 import { UserService } from './user.service';
-import { LoggedInContainerComponent } from 'app/postLogComponents/logged-in-container/logged-in-container.component';
 
 @Injectable({
   providedIn: 'root'
@@ -31,6 +30,11 @@ export class NotesService {
 
   save(note : Notes){
     return this.http.post<Notes>(this.url + "/" + sessionStorage.getItem("userId") + "/note", note);
+  }
+
+  update(id, note: Notes){
+    return this.http.put<Notes[]>(this.url + "/notes/" + id, note);
+
   }
 
 }

@@ -4,6 +4,7 @@ import { AccountService } from '../services/account-service.service'
 import { Account } from '../account/account.component'
 import { TransactionListByAccountComponent } from '../transaction-list-by-account/transaction-list-by-account.component'
 import { Location } from '@angular/common';
+import { TransactionService } from '../services/transaction-service.service'
 
 @Component({
   selector: 'app-account-overview',
@@ -18,8 +19,9 @@ export class AccountOverviewComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private accountService: AccountService
-  
+    private accountService: AccountService,
+    private transactionService:TransactionService,
+    private transactions:TransactionListByAccountComponent
   ){}
 
   ngOnInit() {
@@ -27,6 +29,7 @@ export class AccountOverviewComponent implements OnInit {
     
   }
   getAccount(): void {
+    this.transactions.getTransactions();
     const id = +this.route.snapshot.paramMap.get('accountId');
     this.accountService.getAccountById(id).subscribe(account => this.account = account)
   }

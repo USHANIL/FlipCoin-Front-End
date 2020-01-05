@@ -1,6 +1,10 @@
-<h1>My Accounts</h1>
+<div class="container-header">
+    <h1>My Accounts</h1>
+</div>
+<div class="container">
 
-<div class="container-fluid">
+    <br>
+    <br>
     <div class="row">
         <a *ngFor="let account of accounts" routerLink="/accountsOverview/{{account.accountNumber}}">
             <div class="col-lg-3 col-md-6 col-sm-6">
@@ -27,8 +31,11 @@
                     </div>
                 </div>
             </div>
-
-
         </a>
+
     </div>
+</div>
+<div class="container">
+
+    <button type="button" class="btn" routerLink="/addaccounts">Add Additional Accounts</button>
 </div>

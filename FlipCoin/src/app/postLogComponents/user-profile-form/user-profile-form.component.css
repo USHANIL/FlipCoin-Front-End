@@ -24,3 +24,9 @@ table, th, td {
 .deleteButton{
     width: 50px;
 }
+h4{
+    text-align: center;
+}
+input{
+    border-color: #18d26e;
+}
