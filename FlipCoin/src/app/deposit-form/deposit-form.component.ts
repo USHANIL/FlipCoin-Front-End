@@ -8,27 +8,27 @@ import { TransactionService } from '../services/transaction-service.service';
 import { FormGroup, FormControl, FormBuilder, Validator } from '@angular/forms';
 
 @Component({
-  selector: 'app-tranasction-form',
-  templateUrl: './transaction-form.component.html',
-  styleUrls: ['./transaction-form.component.css']
+  selector: 'app-deposit-form',
+  templateUrl: './deposit-form.component.html',
+  styleUrls: ['./deposit-form.component.css']
 })
 
-export class TransactionFormComponent implements OnInit {
+export class DepositFormComponent implements OnInit {
 
   account: Account;
   accounts: Account[];
   transaction: Transactions;
-  tForm: FormGroup
+  depositForm: FormGroup
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
     private accountService: AccountService,
-    private transactionService: TransactionService,
+    private transactionService: TransactionService
     
   ) {
     this.transaction = new Transactions();
-    this.tForm = this.createFormGroup();
+    this.depositForm = this.createFormGroup();
   }
 
 
@@ -40,10 +40,9 @@ export class TransactionFormComponent implements OnInit {
     this.router.navigateByUrl('accounts');
   }
   onSubmit(){
-    this.accountService.accountDeposit(
-      this.tForm.controls['accountId'].value,
-      this.transaction
-      ).subscribe(data => this.gotoAccountsList());
+    this.transaction.accountNumber = this.depositForm.controls['accountId'].value;
+    this.transaction.amount = this.depositForm.controls['amount'].value;
+    this.accountService.accountDeposit(this.transaction).subscribe(data => this.gotoAccountsList());
   }
   createFormGroup(){
     return new FormGroup({
