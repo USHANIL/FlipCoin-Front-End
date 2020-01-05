@@ -12,6 +12,7 @@ import { RegisterComponent } from './register/register.component';
 import { TransactionListByAccountComponent } from './transaction-list-by-account/transaction-list-by-account.component';
 import { NotesComponent } from './postLogComponents/notes/notes.component';
 import { TransactionFormComponent } from './transaction-form/transaction-form.component'
+import { UserProfileComponent } from './postLogComponents/user-profile/user-profile.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'about', component: AboutUsComponent},
   { path: 'help', component: HelpComponent },
   { path: 'accounts', component: AccountListComponent },
+  { path: 'profile', component: UserProfileComponent},
   { path: 'user/:userId/accounts', component: AccountListComponent},
   { path: 'addaccounts', component: AccountFormComponent },
   { path: 'newTransaction', component: TransactionFormComponent },

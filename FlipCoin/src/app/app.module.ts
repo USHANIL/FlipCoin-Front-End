@@ -29,6 +29,8 @@ import { TransactionListComponent } from './transaction-list/transaction-list.co
 import { NotesComponent } from './postLogComponents/notes/notes.component';
 import { TransactionListByAccountComponent } from './transaction-list-by-account/transaction-list-by-account.component';
 import { TransactionFormComponent } from './transaction-form/transaction-form.component';
+import { UserProfileComponent } from './postLogComponents/user-profile/user-profile.component';
+import { UserProfileFormComponent } from './postLogComponents/user-profile-form/user-profile-form.component';
 
 
 
@@ -57,7 +59,10 @@ import { TransactionFormComponent } from './transaction-form/transaction-form.co
     TransactionListComponent,
     NotesComponent,
     TransactionListByAccountComponent,
-    TransactionFormComponent
+    TransactionFormComponent,
+    UserProfileComponent,
+    UserProfileFormComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -69,7 +74,8 @@ import { TransactionFormComponent } from './transaction-form/transaction-form.co
     
   ],
   providers: [AccountService,
-    { provide: HTTP_INTERCEPTORS, useClass:HttpInterceptorService, multi:true }
+    { provide: HTTP_INTERCEPTORS, useClass:HttpInterceptorService, multi:true },
+     UserProfileComponent
   
   ],
 
