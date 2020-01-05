@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AccountService } from '../services/account-service.service'
 import { Account } from '../account/account.component'
-import { Transactions } from '../transactions/transactions.component'
+
 
 
 @Component({
