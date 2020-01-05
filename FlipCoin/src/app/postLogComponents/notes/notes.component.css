@@ -11,3 +11,14 @@ button:hover{
     display: block;
 
 }
+th{
+    height: 50px;
+    text-align: center;
+}
+
+table, th, td {
+    border-color:  #18d26e;
+}
+.deleteButton{
+    width: 50px;
+}

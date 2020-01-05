@@ -33,6 +33,7 @@ import { TransactionListByAccountComponent } from './transaction-list-by-account
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,12 +54,13 @@ import { TransactionListByAccountComponent } from './transaction-list-by-account
     DashboardComponent,
     LoggedInContainerComponent,
     RegisterComponent,
-
+   
 
     Transactions,
     TransactionListComponent,
     NotesComponent,
-    TransactionListByAccountComponent
+    TransactionListByAccountComponent,
+    
 
   ],
   imports: [

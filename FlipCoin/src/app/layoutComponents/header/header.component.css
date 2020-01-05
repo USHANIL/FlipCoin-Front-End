@@ -8,6 +8,15 @@
     display: inline-block;
     width: 100%;
 }
+#logo{
+    display:flex;
+}
+
+.image{
+    padding-right: 10px;
+}
+
+
 
 nav{
     background-color: lightgrey;
