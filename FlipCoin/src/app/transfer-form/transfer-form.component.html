@@ -1,0 +1,27 @@
+<div class='container'>
+
+    <form [formGroup]="transferForm" (ngSubmit)="onSubmit();">
+        <br>
+        <br>
+        <h5>Select an account from which to send funds.</h5>
+
+        <select class="form-control form-control-lg" formControlName="accountId">
+        
+                <option *ngFor="let account of accounts" [value]="account.accountNumber">{{account.accountName}}  ({{account.type}})
+                </option>
+            </select>
+
+        <div>
+            <label>Amount</label>
+            <input type="text" class="form-control" [value]="transaction.amount" formControlName="amount">
+        </div>
+        <div>
+            <label>Enter the account number of the account to receive these funds</label>
+            <input type="text" class="form-control" [value]="" formControlName="recipientId">
+        </div>
+
+        <br>
+        <button class="btn btn-primary" [disabled]="transferForm.valid">Submit</button>
+
+    </form>
+</div>

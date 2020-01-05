@@ -24,6 +24,7 @@ export class AccountFormComponent implements OnInit {
 
   onSubmit() {
     this.accountService.save(this.account).subscribe(data => this.gotoAccountsList());
+
   }
   gotoAccountsList() {
     this.router.navigateByUrl('accounts');
