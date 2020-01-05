@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./account.component.css']
 })
 export class Account implements OnInit {
-  accountNumber:string;
+  accountNumber:number;
   accountName:string;
   userId:string;
   balance:string;

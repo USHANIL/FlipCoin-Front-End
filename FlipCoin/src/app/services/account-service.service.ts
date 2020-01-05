@@ -19,7 +19,8 @@ export class AccountService {
     return this.http.get<Account[]>(this.accountsUrl +'/accounts/all_accounts');
   }
   public getAccountById(accountNumber: number): Observable<Account> {
-  return this.http.get<Account>(this.accountsUrl+'/accounts/'+ accountNumber);
+    
+  return this.http.get<Account>(this.accountsUrl + '/accounts/' + accountNumber);
   }
  
   public save(accounts: Account) {
@@ -29,8 +30,12 @@ export class AccountService {
   public remove(id: Number) {
     return this.http.delete<Account[]>(this.accountsUrl + '/accounts/'+ id);
   }
-  public getAccountsByUserId(userId: number): Observable<Account[]> {
-    return this.http.get<Account[]>(this.accountsUrl+'/user/{userId}/accounts'
+  public getAccountsByUserId(): Observable<Account[]> {
+    const id = sessionStorage.getItem('userId')
+    return this.http.get<Account[]>(this.accountsUrl+'/user/'+id+'/accounts'
     );
 }
+  public accountDeposit(id:number,amount:number){
+    return this.http.put<Account>(this.accountsUrl+'/accounts/deposit/'+ id+"?amount=" + amount, amount);
+  }
 }

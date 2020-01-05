@@ -16,6 +16,7 @@ export class AccountListComponent implements OnInit {
   @Input() user: User;
   accounts: Account[];
   selectedAccount:Account;
+  overview:number = 1; 
 
   constructor(
     private accountService:AccountService,
@@ -24,13 +25,14 @@ export class AccountListComponent implements OnInit {
     ) { }
 
   ngOnInit() {
-    //this.getUserAccounts();
-    this.accountService.findAll().subscribe(data => {this.accounts = data;
-    });
+    this.getUserAccounts();
+    /*this.accountService.findAll().subscribe(data => {this.accounts = data;
+    });*/
   }
   getUserAccounts()  {
-    const id = +this.route.snapshot.paramMap.get('userId');
-    this.accountService.getAccountsByUserId(id).subscribe(data => {this.accounts = data;
+    
+    //const id = +this.route.snapshot.paramMap.get('userId');
+    this.accountService.getAccountsByUserId().subscribe(data => {this.accounts = data;
     });
   }
   remove(id : Number){
