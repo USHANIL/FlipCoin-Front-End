@@ -60,15 +60,11 @@ import { TransferFormComponent } from './transfer-form/transfer-form.component';
     TransactionListComponent,
     NotesComponent,
     TransactionListByAccountComponent,
-<<<<<<< HEAD
-    TransactionFormComponent
-=======
     DepositFormComponent,
     MakeTransactionComponent,
     WithdrawFormComponent,
-    TransferFormComponent
-
->>>>>>> AccountBill
+    TransferFormComponent,
+    
   ],
   imports: [
     BrowserModule,
