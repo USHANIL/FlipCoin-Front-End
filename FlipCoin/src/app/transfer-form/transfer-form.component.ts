@@ -41,10 +41,10 @@ export class TransferFormComponent implements OnInit {
   onSubmit(){
     this.transactionTo.accountNumber = this.transferForm.controls['accountId'].value;
     this.transactionTo.amount = this.transferForm.controls['amount'].value;
-    this.accountService.tranferTo(this.transactionTo).subscribe(data => this.gotoAccountsList());
+    this.accountService.transferTo(this.transactionTo).subscribe(data => this.gotoAccountsList());
     this.transactionFrom.accountNumber = this.transferForm.controls['accountId'].value;
     this.transactionFrom.amount = this.transferForm.controls['recipientId'].value;
-    this.accountService.tranferFrom(this.transactionFrom).subscribe(data => this.gotoAccountsList());
+    this.accountService.transferFrom(this.transactionFrom).subscribe(data => this.gotoAccountsList());
   }
   createFormGroup(){
     return new FormGroup({
