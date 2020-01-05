@@ -1,31 +1,48 @@
-<div class="container overflow-auto">
-    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-        aria-haspopup="true" aria-expanded="false">
-        New List
-    </button>
+<div class='container'>
 
 
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <table class="table table-bordered lightgreen">
+        <thead>
+            <th>Create Note</th>
+        </thead>
+        <tr>
+            <td>
+                <form #it="ngForm" (ngSubmit)="saveNote()">
+                    <div class="form-group">
+                        <textarea class="form-control" type="text" rows="2" name="note" [(ngModel)]="newNote.note"
+                            #note="ngModel" placeholder="Type note here" required></textarea>
+                    </div>
 
-        <form #it="ngForm" (ngSubmit)="saveNote()">
-            <div class="form-group">
-                <textarea class="form-control" type="text" rows="4" name="note" [(ngModel)]="newNote.note" #note="ngModel"
-                    placeholder="Type note here" required></textarea>
-            </div>
-            <!-- work with posting a note -->
-            <button type="submit" [disabled]="!it.form.valid" class="btn btn-dark">Submit</button>
-        </form>
+                    <button type="submit" [disabled]="!it.form.valid" class="btn btn-dark">Submit</button>
+                </form>
+            </td>
+        </tr>
 
-    </div>
+    </table>
 
-    <ul class="list-group list-group-flush">
-        <li *ngFor="let note of notes" class="list-group-item text-right">
-            <p style="font-size: 10px;"> {{note.noteDate | date : 'mediumDate' }}</p>
-            <p style="font-size:12px">{{ note.note }}</p>
-            <!-- deletes note from list -->
-            <button class="btn btn-sm " (click)="deleteNote(note.noteId)" type="button"
-                style="font-size:12px">Remove</button>
-            <hr style="margin: 0 15%; border-top-color: #18d26e;">
-        </li>
-    </ul>
+
+
+    <table class="table table-bordered">
+        <thead>
+            <th>Goal</th>
+            <th>Date</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let note of notes">
+                <td *ngIf="note.noteId === editRowId">
+                    <form #it="ngForm" (ngSubmit)="updateNote()">
+                        <input type="text" name="note" [(ngModel)]="updateTheNote.note" #note="ngModel">
+                        <button class="btn btn-sm " type="submit" style="font-size:12px">Update</button>
+                    </form>
+                </td>
+
+                <td *ngIf="note.noteId !== editRowId" (click)="Edit(note.noteId)">{{note.note}}</td>
+                <td>{{note.noteDate | date : 'mediumDate'}}</td>
+                <td class="deleteButton">
+                    <button class="btn btn-sm " (click)="deleteNote(note.noteId)" type="button"
+                        style="font-size:12px">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>

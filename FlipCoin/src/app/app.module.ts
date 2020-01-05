@@ -32,6 +32,7 @@ import { TransactionFormComponent } from './transaction-form/transaction-form.co
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,7 +58,6 @@ import { TransactionFormComponent } from './transaction-form/transaction-form.co
     NotesComponent,
     TransactionListByAccountComponent,
     TransactionFormComponent
-
   ],
   imports: [
     BrowserModule,

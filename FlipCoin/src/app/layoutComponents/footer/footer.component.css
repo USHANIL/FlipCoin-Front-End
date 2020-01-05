@@ -11,4 +11,6 @@ a:hover{
 }
 footer{
     background-color: lightgrey;
+    display: block;
+    
 }
