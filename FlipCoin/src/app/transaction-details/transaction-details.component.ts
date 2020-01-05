@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Injectable } from '@angular/core';
 import { Transactions } from 'app/transactions/transactions.component';
 import { TransactionService } from 'app/services/transaction-service.service';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -8,6 +8,11 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './transaction-details.component.html',
   styleUrls: ['./transaction-details.component.css']
 })
+
+@Injectable({
+  providedIn:'root'
+})
+
 export class TransactionDetailsComponent implements OnInit {
 
   @Input() transaction: Transactions;
@@ -21,8 +26,6 @@ export class TransactionDetailsComponent implements OnInit {
 
   getTransactionetails(): void {
     const id = + this.route.snapshot.paramMap.get('transactionId');
-    this.transactionService.getTransactionDetails(id).subscribe(data => {this.transaction = data;
-    });
     this.transactionService.getTransactionDetails(id).subscribe(data => {this.transaction = data;
     });
   }

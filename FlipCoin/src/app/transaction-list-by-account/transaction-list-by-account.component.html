@@ -1,7 +1,6 @@
 <div class="card-body">
     <table class="table table-bordered table-striped">
         <thead class="thead-dark">
-<<<<<<< HEAD
         <tr>
           <th scope="col">#</th>
           <th scope="col">Date</th>
@@ -17,21 +16,6 @@
           <td>${{ transaction.amount }}</td>
           <!-- <td><button (click)="transactionDetails(transaction.id)" class="btn btn-info" style="margin-left: 10px">Transaction Details</button>></td> -->
         </tr>
-=======
-            <tr>
-                <th scope="col">Date</th>
-                <th scope="col">Description</th>
-                <th scope="col">Amount</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let transaction of transactions" routerLink="transactions">
-                <td>{{ transaction.transactionDate | date: 'MM/dd/yyy' }}</td>
-                <td>{{ transaction.type }}</td>
-                <td>${{ transaction.amount }}</td>
-                <!-- <td><button (click)="transactionDetails(transaction.id)" class="btn btn-info" style="margin-left: 10px">Transaction Details</button>></td> -->
-            </tr>
->>>>>>> dev
-        </tbody>
+
     </table>
 </div>
