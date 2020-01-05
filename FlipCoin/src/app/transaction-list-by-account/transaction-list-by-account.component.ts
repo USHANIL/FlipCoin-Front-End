@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Injectable } from '@angular/core';
 import { Transactions } from 'app/transactions/transactions.component';
 import { TransactionService } from 'app/services/transaction-service.service';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -9,6 +9,10 @@ import { Account } from 'app/account/account.component';
   templateUrl: './transaction-list-by-account.component.html',
   styleUrls: ['./transaction-list-by-account.component.css']
 })
+@Injectable({
+  providedIn:'root'
+})
+
 export class TransactionListByAccountComponent implements OnInit {
 
   @Input() account: Account;
@@ -22,7 +26,7 @@ export class TransactionListByAccountComponent implements OnInit {
   }
 
   getTransactions(): void {
-    const id = + this.route.snapshot.paramMap.get('accountId');
+    const id = +this.route.snapshot.paramMap.get('accountId');
     this.transactionService.getTransactions(id).subscribe(data => this.transactions = data);
   }
 

@@ -16,6 +16,7 @@ export class AccountListComponent implements OnInit {
   @Input() user: User;
   accounts: Account[];
   selectedAccount:Account;
+  overview:number = 1; 
 
   constructor(
     private accountService:AccountService,
