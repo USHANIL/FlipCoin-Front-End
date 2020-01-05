@@ -30,4 +30,8 @@ export class Transactions implements OnInit {
     return this.userId;
   }
 
+  getType() {
+    return this.type;
+  }
+
 }

@@ -27,4 +27,8 @@ export class TransactionService {
         return this.http.get<Transactions[ ]>(this.transactionsUrl + '/user/' + userId + '/most_recent_transactions');
     }
 
+    public getTransactionDetails(transactionId: number): Observable<Transactions> {
+        return this.http.get<Transactions>(this.transactionsUrl + '/accounts/transactions/' + transactionId + '/transaction_details')
+    }
+
 }

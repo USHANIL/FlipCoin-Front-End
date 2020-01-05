@@ -14,6 +14,7 @@ import { TransactionListByAccountComponent } from './transaction-list-by-account
 
 import { NotesComponent } from './postLogComponents/notes/notes.component';
 import { TransactionListTopByUserComponent } from './transaction-list-top-by-user/transaction-list-top-by-user.component';
+import { TransactionDetailsComponent } from './transaction-details/transaction-details.component';
 
 
 const routes: Routes = [
@@ -31,6 +32,7 @@ const routes: Routes = [
   { path: 'accountsOverview/:accountId', component: AccountOverviewComponent},
   { path: 'accounts/:accountId/transactions', component: TransactionListByAccountComponent},
   { path: 'user/:userId/transactions-user', component: TransactionListTopByUserComponent},
+  { path: 'transactionDetails/:transactionId', component: TransactionDetailsComponent},
   
   
  

@@ -3,13 +3,15 @@
       <table class="table table-bordered table-striped">
         <thead class="thead-dark">
         <tr>
+          <th scope="col">#</th>
           <th scope="col">Date</th>
           <th scope="col">Description</th>
           <th scope="col">Amount</th>
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let transaction of transactions" routerLink="transactions">
+        <tr *ngFor="let transaction of transactions">
+          <td>{{ transaction.transactionId }}</td>
           <td>{{ transaction.transactionDate | date: 'MM/dd/yyy' }}</td>
           <td>{{ transaction.type }}</td>
           <td>${{ transaction.amount }}</td>
