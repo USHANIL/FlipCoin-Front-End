@@ -1,0 +1,26 @@
+.container{
+    display: flex;
+    justify-content: space-around;
+}
+.child{
+    width:40%;
+}
+.btn{
+    background-color: lightgrey;
+    color: black;
+}
+
+.btn:hover{
+    background-color: lightgrey;
+    color: #18d26e;
+}
+
+tr{
+    border-color:  #18d26e; 
+}
+.deleteButton{
+    width: 50px;
+}
+tfoot{
+    text-align: center;
+}

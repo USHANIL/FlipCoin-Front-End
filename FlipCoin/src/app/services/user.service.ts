@@ -22,5 +22,11 @@ export class UserService {
         sessionStorage.setItem('userId', userData.userId);
       }
     ));
- }
+  }
+
+  updateUser(user : User){
+    return this.http.put<User[]>(this.url + "user/update/" + sessionStorage.getItem('userId'),user);
+
+  }
+
 }
