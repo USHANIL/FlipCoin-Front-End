@@ -1,1 +1,39 @@
-<p>bill-form works!</p>
+<div class="container">
+    <h6>Add a new account to track here.</h6>
+    <div class="card my-5">
+        <div class="card-body">
+            <form (ngSubmit)="onSubmit()" #billForm="ngForm">
+                <div class="form-group">
+                    <label for="accountName">Enter Provider</label>
+                    <input type="text" [(ngModel)]="account.accountName" class="form-control" id="accountName" name="accountName" placeholder="Enter a name for your account" required #type="ngModel">
+                </div>
+                <div class="form-group">
+                    <label for="type">Enter service provided</label>
+                    <input type="text" [(ngModel)]="account.type" class="form-control" id="type" name="type" placeholder="Enter the account type" required #type="ngModel">
+                </div>
+                <div [hidden]="!type.pristine" class="alert alert-danger">Account Type is required</div>
+                <div class="form-group">
+                    <label for="balance">Enter your payment</label>
+                    <input type="text" [(ngModel)]="account.balance" class="form-control" id="balance" name="balance" placeholder="Enter your Initial Balance" required #balance="ngModel">
+                    <div [hidden]="!balance.pristine" class="alert alert-danger">Initial Balance is required</div>
+                </div>
+                <div class="form-group">
+                    <label for="balance">Enter Next Payment Date</label>
+                    <input type="text" [(ngModel)]="account.balance" class="form-control" id="balance" name="balance" placeholder="Enter your Initial Balance" required #balance="ngModel">
+                    <div [hidden]="!balance.pristine" class="alert alert-danger">Initial Balance is required</div>
+                </div>
+                <div class="form-group">
+                    <label for="balance">Enter your payment</label>
+                    <input type="text" [(ngModel)]="account.balance" class="form-control" id="balance" name="balance" placeholder="Enter your Initial Balance" required #balance="ngModel">
+                    <div [hidden]="!balance.pristine" class="alert alert-danger">Initial Balance is required</div>
+                </div>
+                <div class="form-group">
+                    <label for="balance">Enter your payment</label>
+                    <input type="text" [(ngModel)]="account.balance" class="form-control" id="balance" name="balance" placeholder="Enter your Initial Balance" required #balance="ngModel">
+                    <div [hidden]="!balance.pristine" class="alert alert-danger">Initial Balance is required</div>
+                </div>
+                <button type="submit" [disabled]="!billForm.form.valid" class="btn btn-info">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

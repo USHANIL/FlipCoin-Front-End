@@ -10,6 +10,7 @@ import { BillComponent } from '../bill/bill.component'
 export class BillFormComponent implements OnInit {
 
   bill: BillComponent;
+  
 
   constructor(
     private route: ActivatedRoute,
@@ -19,6 +20,7 @@ export class BillFormComponent implements OnInit {
   }
   
   onSubmit() {
+    this.bill.userId = sessionStorage.getItem('userId');
     this.billsService.save(this.bill).subscribe(data => this.gotoBillsList());
   }
   gotoBillsList() {
