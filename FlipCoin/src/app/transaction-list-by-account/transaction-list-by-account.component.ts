@@ -30,4 +30,8 @@ export class TransactionListByAccountComponent implements OnInit {
     this.transactionService.getTransactions(id).subscribe(data => this.transactions = data);
   }
 
+  onSelect(transaction: Transactions): void {
+    this.selectedTransaction = transaction;
+  }
+
 }

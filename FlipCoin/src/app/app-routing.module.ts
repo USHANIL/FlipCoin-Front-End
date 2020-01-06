@@ -11,9 +11,14 @@ import { LoggedInContainerComponent } from './postLogComponents/logged-in-contai
 import { RegisterComponent } from './register/register.component';
 import { TransactionListByAccountComponent } from './transaction-list-by-account/transaction-list-by-account.component';
 import { NotesComponent } from './postLogComponents/notes/notes.component';
+
+import { TransactionListTopByUserComponent } from './transaction-list-top-by-user/transaction-list-top-by-user.component';
+import { TransactionDetailsComponent } from './transaction-details/transaction-details.component';
+
 import { UserProfileComponent } from './postLogComponents/user-profile/user-profile.component';
 import { DepositFormComponent } from './deposit-form/deposit-form.component';
 import { MakeTransactionComponent } from './make-transaction/make-transaction.component'
+
 
 
 const routes: Routes = [
@@ -32,6 +37,15 @@ const routes: Routes = [
   { path: 'newTransaction', component: MakeTransactionComponent },
   { path: 'accountsOverview/:accountId', component: AccountOverviewComponent},
   { path: 'accounts/:accountId/transactions', component: TransactionListByAccountComponent},
+
+  { path: 'user/:userId/transactions-user', component: TransactionListTopByUserComponent},
+  { path: 'transactionDetails/:transactionId', component: TransactionDetailsComponent},
+  
+  
+ 
+  
+
+
   { path: 'accountsOverview/:accountId', component: AccountOverviewComponent}
 
 ];
