@@ -18,36 +18,36 @@ import { TransactionDetailsComponent } from './transaction-details/transaction-d
 import { UserProfileComponent } from './postLogComponents/user-profile/user-profile.component';
 import { DepositFormComponent } from './deposit-form/deposit-form.component';
 import { MakeTransactionComponent } from './make-transaction/make-transaction.component'
-
+import { BillListComponent } from './bill-list/bill-list.component'
+import { BillFormComponent } from './bill-form/bill-form.component'
+import { BillDetailsComponent } from './bill-details/bill-details.component'
 
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'logged-in', component: LoggedInContainerComponent },
-  { path: 'registration', component: RegisterComponent},
+  { path: 'registration', component: RegisterComponent },
   { path: 'notes', component: NotesComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'about', component: AboutUsComponent},
+  { path: 'about', component: AboutUsComponent },
   { path: 'help', component: HelpComponent },
   { path: 'accounts', component: AccountListComponent },
-  { path: 'profile', component: UserProfileComponent},
-  { path: 'user/:userId/accounts', component: AccountListComponent},
+  { path: 'profile', component: UserProfileComponent },
+  { path: 'user/:userId/accounts', component: AccountListComponent },
   { path: 'addaccounts', component: AccountFormComponent },
-  { path: 'deposit', component: DepositFormComponent},
+  { path: 'deposit', component: DepositFormComponent },
   { path: 'newTransaction', component: MakeTransactionComponent },
+  { path: 'accountsOverview/:accountId', component: AccountOverviewComponent },
+  { path: 'accounts/:accountId/transactions', component: TransactionListByAccountComponent },
+  { path: 'accountsOverview/:accountId', component: AccountOverviewComponent },
+  { path: 'billtracker', component: BillListComponent },
+  { path: 'billDetails', component: BillDetailsComponent },
+  { path: 'addbill', component: BillFormComponent },
   { path: 'accountsOverview/:accountId', component: AccountOverviewComponent},
   { path: 'accounts/:accountId/transactions', component: TransactionListByAccountComponent},
-
   { path: 'user/:userId/transactions-user', component: TransactionListTopByUserComponent},
   { path: 'transactionDetails/:transactionId', component: TransactionDetailsComponent},
-  
-  
- 
-  
-
-
   { path: 'accountsOverview/:accountId', component: AccountOverviewComponent}
-
 ];
 
 @NgModule({

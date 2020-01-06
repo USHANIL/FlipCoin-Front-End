@@ -42,11 +42,11 @@ export class AccountService {
   public accountWithdraw(transaction:Transactions){
     return this.http.put<Account>(this.accountsUrl+'/accounts/withdraw/',transaction);
   }
-  public transferTo(transaction:Transactions){
-    return this.http.put<Account>(this.accountsUrl+'/accounts/transferTo/',transaction);
+  public transferSender(transaction:Transactions){
+    return this.http.put<Account>(this.accountsUrl+'/accounts/transferSender/',transaction);
   }
-  public transferFrom(transaction:Transactions){
-    return this.http.put<Account>(this.accountsUrl+'/accounts/transferFrom/',transaction);
+  public transferRecipient(transaction:Transactions){
+    return this.http.put<Account>(this.accountsUrl+'/accounts/transferRecipient/',transaction);
   }
   
 }

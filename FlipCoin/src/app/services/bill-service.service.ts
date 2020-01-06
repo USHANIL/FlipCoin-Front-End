@@ -11,6 +11,7 @@ import { Observable, of } from 'rxjs'
 export class BillService {
 
   private accountsUrl: string;
+  private storedId:number;
 
   constructor(private http: HttpClient) {
     this.accountsUrl = 'http://localhost:8080/API';
@@ -19,13 +20,22 @@ export class BillService {
   public findAll(): Observable<BillComponent[]> {
     return this.http.get<BillComponent[]>(this.accountsUrl + '/bills/all_bills');
   }
-  public getBillById(billId: number): Observable<BillComponent> {
+  public getBillById(billId: any): Observable<BillComponent> {
     return this.http.get<BillComponent>(this.accountsUrl + '/bills/' + billId);
+  }
+  public getBillsByUserId(id:number): Observable<BillComponent[]>{
+    return this.http.get<BillComponent[]>(this.accountsUrl + '/bills/user/' + id);
   }
   public save(bills: BillComponent) {
     return this.http.post<BillComponent>(this.accountsUrl + '/bills/create_bill', bills);
   }
-  public remove(id: Number) {
+  public remove(id: number) {
     return this.http.delete<BillComponent[]>(this.accountsUrl + '/bills/delete/' + id);
+  }
+  public setStoreId(id: number){
+    this.storedId = id;
+  }
+  public getStoredId():number{
+    return this.storedId
   }
 }

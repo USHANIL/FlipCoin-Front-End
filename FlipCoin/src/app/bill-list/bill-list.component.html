@@ -1,34 +1,36 @@
-<p>bill-list works!</p>
-<h1>My Bill Tracker</h1>
+<div class="container">
+    <h4>My Bill Tracker</h4>
+</div>
+<div class="container">
+    <!--Table-->
+    <table id="tablePreview" class="table table-hover table-striped">
+        <!--Table head-->
+        <thead>
+            <tr>
+
+                <th style="width: 100px">Company</th>
+                <th style="width: 100px">Utility</th>
+                <th style="width: 100px">Payment Due Date</th>
+                <th style="width: 100px">Amount Due</th>
+            </tr>
+        </thead>
+        <!--Table head-->
+        <!--Table body-->
+        <tbody>
+            <tr *ngFor="let bill of bills" (click)="storeNumber(bill.billId)">
+                <td style="width: 100px">{{bill.recipient}}</td>
+                <td style="width: 100px">{{bill.purpose}}</td>
+                <td style="width: 100px">${{bill.amount}}</td>
+                <td style="width: 100px">{{bill.initialBillDate|date}}</td>
+
+            </tr>
 
 
-<!--Table-->
-<table id="tablePreview" class="table table-hover table-sm table-striped">
-    <!--Table head-->
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>Company</th>
-            <th>Utility</th>
-            <th>Payment Due Date</th>
-            <th>Amount Due</th>
-        </tr>
-    </thead>
-    <!--Table head-->
-    <!--Table body-->
-    <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <a *ngFor="let bill of bills" class="list-group-item list-group-item-action border border-info rounded" routerLink="/bills/details/{{bill.billId}}">
-                <td>{{bill.recipient}}</td>
-                <td>{{bill.purpose}}</td>
-                <td>{{bill.amount}}</td>
-                <td>{{bill.initialBillDate}}</td>
 
-            </a>
-        </tr>
-        <div>Total Due: {{total}}</div>
-    </tbody>
-    <!--Table body-->
-</table>
+
+        </tbody>
+        <!--Table body-->
+    </table>
+    <button type="button" routerLink="/addbill">Add Bill</button>
+</div>
 <!--Table-->

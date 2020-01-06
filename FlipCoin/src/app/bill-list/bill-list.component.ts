@@ -5,6 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { BillDetailsComponent } from '../bill-details/bill-details.component';
 
 
+
 @Component({
   selector: 'app-bill-list',
   templateUrl: './bill-list.component.html',
@@ -13,12 +14,15 @@ import { BillDetailsComponent } from '../bill-details/bill-details.component';
 export class BillListComponent implements OnInit {
   total: number;
   bills: BillComponent[];
+  bill: BillComponent;
   selectedBill: BillComponent;
+  storedId:number
 
   constructor(
     private billService: BillService,
     private route: ActivatedRoute,
     private router: Router
+    
   ) { }
 
   ngOnInit() {
@@ -31,7 +35,7 @@ export class BillListComponent implements OnInit {
   gotoBillsList() {
     this.router.navigate(['bills']);
   }
-  remove(id : Number){
+  remove(id : number){
     this.billService.remove(id).subscribe(result => {this.gotoBillsList()});
   }
   onSelect(bill: BillComponent): void {
@@ -41,5 +45,10 @@ export class BillListComponent implements OnInit {
     for (let bill of this.bills){
       this.total+=bill.amount;
     }
+  }
+  storeNumber(id:number){
+  this.billService.setStoreId(id);
+  this.router.navigateByUrl('billDetails');
+  console.log(id);
   }
 }
