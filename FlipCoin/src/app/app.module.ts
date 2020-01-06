@@ -70,7 +70,6 @@ import { TransferFormComponent } from './transfer-form/transfer-form.component';
     WithdrawFormComponent,
     TransferFormComponent
 
-
   ],
   imports: [
     BrowserModule,
@@ -83,7 +82,7 @@ import { TransferFormComponent } from './transfer-form/transfer-form.component';
   ],
   providers: [AccountService,
     { provide: HTTP_INTERCEPTORS, useClass:HttpInterceptorService, multi:true },
-     UserProfileComponent
+     UserProfileComponent,
   
   ],
 
