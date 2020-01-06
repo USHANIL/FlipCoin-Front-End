@@ -46,7 +46,7 @@ const routes: Routes = [
   { path: 'accountsOverview/:accountId', component: AccountOverviewComponent},
   { path: 'accounts/:accountId/transactions', component: TransactionListByAccountComponent},
   { path: 'user/:userId/transactions-user', component: TransactionListTopByUserComponent},
-  { path: 'transactionDetails/:transactionId', component: TransactionDetailsComponent},
+  { path: 'transactionDetails', component: TransactionDetailsComponent},
   { path: 'accountsOverview/:accountId', component: AccountOverviewComponent}
 ];
 

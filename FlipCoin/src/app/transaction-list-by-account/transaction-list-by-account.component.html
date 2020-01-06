@@ -1,20 +1,27 @@
 <div class="card-body">
-    <table class="table table-bordered table-striped">
-        <thead class="thead-dark">
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Date</th>
-          <th scope="col">Description</th>
-          <th scope="col">Amount</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let transaction of transactions">
-          <a href="transactionDetails/{{transaction.transactionId}}"><td>{{ transaction.transactionId }}</td></a>
-          <td>{{ transaction.transactionDate | date: 'MM/dd/yyy' }}</td>
-          <td>{{ transaction.type }}</td>
-          <td>${{ transaction.amount }}</td>
-        </tr>
+  <table class="table table-bordered table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Date</th>
+        <th scope="col">Description</th>
+        <th scope="col">Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let transaction of transactions">
+        <td><button (click)="onClick2(transaction.transactionId)" type="button">{{ transaction.transactionId }}</button></td>
+        <td>{{ transaction.transactionDate | date: 'MM/dd/yyy' }}</td>
+        <td>{{ transaction.type }}</td>
+        <td>${{ transaction.amount }}</td>
+      <div>
+        <app-transaction-details *ngIf="toggle === false"></app-transaction-details>
+      </div>
+      </tr>
+    </tbody>
+    
 
-    </table>
+    
+
+  </table>
 </div>

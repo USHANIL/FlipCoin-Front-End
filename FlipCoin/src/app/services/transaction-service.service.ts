@@ -10,6 +10,7 @@ import { Account } from 'app/account/account.component';
 export class TransactionService {
 
     transactionsUrl: string;
+    storedId: number;
 
     constructor(private http: HttpClient) {
         this.transactionsUrl = 'http://localhost:8080/API';
@@ -28,7 +29,15 @@ export class TransactionService {
     }
 
     public getTransactionDetails(transactionId: number): Observable<Transactions> {
-        return this.http.get<Transactions>(this.transactionsUrl + '/accounts/transactions/' + transactionId + '/transaction_details')
+        return this.http.get<Transactions>(this.transactionsUrl + '/accounts/transactions/' + transactionId)
+    }
+
+    public getStoredId(): number {
+        return this.storedId;
+    }
+
+    public setStoredId(id: number) {
+        this.storedId = id;
     }
 
 }

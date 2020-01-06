@@ -1,0 +1,17 @@
+.fullName {
+    border: 3px solid gray;
+}
+
+.email {
+    border: gray;
+}
+
+button {
+    background-color: lightgrey;
+    color: black;
+}
+
+button:hover{
+    background-color: lightgrey;
+    color: #18d26e;
+}
