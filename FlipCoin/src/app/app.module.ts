@@ -40,6 +40,7 @@ import { WithdrawFormComponent } from './withdraw-form/withdraw-form.component';
 import { TransferFormComponent } from './transfer-form/transfer-form.component';
 import { TransferOtherComponent } from './transfer-other/transfer-other.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import { TransactionService } from './services/transaction-service.service';
 
  
 @NgModule({
@@ -92,7 +93,7 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
   ],
   providers: [AccountService,
     { provide: HTTP_INTERCEPTORS, useClass:HttpInterceptorService, multi:true },
-     UserProfileComponent,
+     UserProfileComponent, TransactionService
   
   ],
 
