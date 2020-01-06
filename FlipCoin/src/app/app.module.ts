@@ -28,6 +28,10 @@ import { Transactions } from './transactions/transactions.component';
 import { TransactionListComponent } from './transaction-list/transaction-list.component';
 import { NotesComponent } from './postLogComponents/notes/notes.component';
 import { TransactionListByAccountComponent } from './transaction-list-by-account/transaction-list-by-account.component';
+
+import { TransactionListTopByUserComponent } from './transaction-list-top-by-user/transaction-list-top-by-user.component';
+import { TransactionDetailsComponent } from './transaction-details/transaction-details.component';
+
 import { UserProfileComponent } from './postLogComponents/user-profile/user-profile.component';
 import { UserProfileFormComponent } from './postLogComponents/user-profile-form/user-profile-form.component';
 import { DepositFormComponent } from './deposit-form/deposit-form.component';
@@ -36,6 +40,7 @@ import { WithdrawFormComponent } from './withdraw-form/withdraw-form.component';
 import { TransferFormComponent } from './transfer-form/transfer-form.component';
 import { TransferOtherComponent } from './transfer-other/transfer-other.component';
 import { BillService } from './services/bill-service.service';
+
 
 
 
@@ -65,17 +70,47 @@ import { BillService } from './services/bill-service.service';
     TransactionListComponent,
     NotesComponent,
     TransactionListByAccountComponent,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> dev
     DepositFormComponent,
     MakeTransactionComponent,
     WithdrawFormComponent,
     TransferFormComponent,
+<<<<<<< HEAD
+=======
+    
+=======
+=======
+
+    TransactionListTopByUserComponent,
+    TransactionDetailsComponent,
+
+>>>>>>> 6d363a208da0af4e0761f515894b145e6d58179f
+>>>>>>> dev
     UserProfileComponent,
     UserProfileFormComponent,
     DepositFormComponent,
     MakeTransactionComponent,
     WithdrawFormComponent,
+<<<<<<< HEAD
     TransferFormComponent,
     TransferOtherComponent
+=======
+    TransferFormComponent
+
+<<<<<<< HEAD
+=======
+
+
+<<<<<<< HEAD
+>>>>>>> 91e712e29aa29305512588ac7b870b29226ec926
+=======
+>>>>>>> dev
+>>>>>>> 6d363a208da0af4e0761f515894b145e6d58179f
+>>>>>>> dev
   ],
   
   imports: [
@@ -89,7 +124,12 @@ import { BillService } from './services/bill-service.service';
   ],
   providers: [AccountService, BillService, BillListComponent,
     { provide: HTTP_INTERCEPTORS, useClass:HttpInterceptorService, multi:true },
+<<<<<<< HEAD
      UserProfileComponent
+=======
+     UserProfileComponent,
+  
+>>>>>>> dev
   ],
 
   bootstrap: [AppComponent]
