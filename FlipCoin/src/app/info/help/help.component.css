@@ -5,3 +5,17 @@
     padding: 10px;
     text-align: center;
 }
+
+.faq{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.answer{
+    color: gray;
+
+}
+
+.question{
+    cursor: pointer;
+}
