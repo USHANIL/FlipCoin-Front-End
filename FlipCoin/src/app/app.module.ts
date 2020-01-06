@@ -34,6 +34,8 @@ import { DepositFormComponent } from './deposit-form/deposit-form.component';
 import { MakeTransactionComponent } from './make-transaction/make-transaction.component';
 import { WithdrawFormComponent } from './withdraw-form/withdraw-form.component';
 import { TransferFormComponent } from './transfer-form/transfer-form.component';
+import { TransferOtherComponent } from './transfer-other/transfer-other.component';
+import { BillService } from './services/bill-service.service';
 
 
 
@@ -72,7 +74,8 @@ import { TransferFormComponent } from './transfer-form/transfer-form.component';
     DepositFormComponent,
     MakeTransactionComponent,
     WithdrawFormComponent,
-    TransferFormComponent
+    TransferFormComponent,
+    TransferOtherComponent
   ],
   
   imports: [
@@ -84,10 +87,9 @@ import { TransferFormComponent } from './transfer-form/transfer-form.component';
     RouterModule
     
   ],
-  providers: [AccountService,
+  providers: [AccountService, BillService, BillListComponent,
     { provide: HTTP_INTERCEPTORS, useClass:HttpInterceptorService, multi:true },
      UserProfileComponent
-  
   ],
 
   bootstrap: [AppComponent]

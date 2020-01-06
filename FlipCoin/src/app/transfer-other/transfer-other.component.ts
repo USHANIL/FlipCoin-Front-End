@@ -8,16 +8,17 @@ import { TransactionService } from '../services/transaction-service.service';
 import { FormGroup, FormControl, FormBuilder, Validator } from '@angular/forms';
 
 @Component({
-  selector: 'app-transfer-form',
-  templateUrl: './transfer-form.component.html',
-  styleUrls: ['./transfer-form.component.css']
+  selector: 'app-transfer-other',
+  templateUrl: './transfer-other.component.html',
+  styleUrls: ['./transfer-other.component.css']
 })
-export class TransferFormComponent implements OnInit {
+export class TransferOtherComponent implements OnInit {
+
   account: Account;
   accounts: Account[];
   transactionSender: Transactions;
   transactionRecipient: Transactions;
-  transferForm: FormGroup;
+  otherForm: FormGroup;
 
   constructor(
     private route: ActivatedRoute,
@@ -28,7 +29,7 @@ export class TransferFormComponent implements OnInit {
   ) {
     this.transactionSender = new Transactions();
     this.transactionRecipient = new Transactions();
-    this.transferForm = this.createFormGroup();
+    this.otherForm = this.createFormGroup();
    }
 
    ngOnInit() {
@@ -39,11 +40,11 @@ export class TransferFormComponent implements OnInit {
     this.router.navigateByUrl('accounts');
   }
   onSubmit(){
-    this.transactionSender.accountNumber = this.transferForm.controls['accountId'].value;
-    this.transactionSender.amount = this.transferForm.controls['amount'].value;
+    this.transactionSender.accountNumber = this.otherForm.controls['accountId'].value;
+    this.transactionSender.amount = this.otherForm.controls['amount'].value;
     this.accountService.transferSender(this.transactionSender).subscribe(data => this.gotoAccountsList());
-    this.transactionRecipient.accountNumber = this.transferForm.controls['recipientId'].value;
-    this.transactionRecipient.amount = this.transferForm.controls['amount'].value;
+    this.transactionRecipient.accountNumber = this.otherForm.controls['recipientId'].value;
+    this.transactionRecipient.amount = this.otherForm.controls['amount'].value;
     this.accountService.transferRecipient(this.transactionRecipient).subscribe(data => this.gotoAccountsList());
    
   }
