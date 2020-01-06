@@ -38,14 +38,8 @@ import { DepositFormComponent } from './deposit-form/deposit-form.component';
 import { MakeTransactionComponent } from './make-transaction/make-transaction.component';
 import { WithdrawFormComponent } from './withdraw-form/withdraw-form.component';
 import { TransferFormComponent } from './transfer-form/transfer-form.component';
-import { TransferOtherComponent } from './transfer-other/transfer-other.component';
-import { BillService } from './services/bill-service.service';
 
-
-
-
-
-
+ 
 @NgModule({
   declarations: [
     AppComponent,
@@ -70,49 +64,19 @@ import { BillService } from './services/bill-service.service';
     TransactionListComponent,
     NotesComponent,
     TransactionListByAccountComponent,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> dev
     DepositFormComponent,
     MakeTransactionComponent,
     WithdrawFormComponent,
     TransferFormComponent,
-<<<<<<< HEAD
-=======
-    
-=======
-=======
-
     TransactionListTopByUserComponent,
     TransactionDetailsComponent,
-
->>>>>>> 6d363a208da0af4e0761f515894b145e6d58179f
->>>>>>> dev
     UserProfileComponent,
     UserProfileFormComponent,
     DepositFormComponent,
     MakeTransactionComponent,
     WithdrawFormComponent,
-<<<<<<< HEAD
-    TransferFormComponent,
-    TransferOtherComponent
-=======
     TransferFormComponent
-
-<<<<<<< HEAD
-=======
-
-
-<<<<<<< HEAD
->>>>>>> 91e712e29aa29305512588ac7b870b29226ec926
-=======
->>>>>>> dev
->>>>>>> 6d363a208da0af4e0761f515894b145e6d58179f
->>>>>>> dev
   ],
-  
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -122,14 +86,10 @@ import { BillService } from './services/bill-service.service';
     RouterModule
     
   ],
-  providers: [AccountService, BillService, BillListComponent,
+  providers: [AccountService,
     { provide: HTTP_INTERCEPTORS, useClass:HttpInterceptorService, multi:true },
-<<<<<<< HEAD
-     UserProfileComponent
-=======
      UserProfileComponent,
   
->>>>>>> dev
   ],
 
   bootstrap: [AppComponent]
