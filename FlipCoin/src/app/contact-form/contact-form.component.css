@@ -15,3 +15,7 @@ button:hover{
     background-color: lightgrey;
     color: #18d26e;
 }
+
+.thankyou_message {
+    display: none;
+}
