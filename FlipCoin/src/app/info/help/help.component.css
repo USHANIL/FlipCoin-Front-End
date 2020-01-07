@@ -8,7 +8,7 @@
 
 .faq{
     width: 50%;
-    margin: 0 auto;
+    margin: auto;
 }
 
 .answer{
@@ -18,4 +18,5 @@
 
 .question{
     cursor: pointer;
+    padding-top: 3%;
 }
