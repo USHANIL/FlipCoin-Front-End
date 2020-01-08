@@ -13,7 +13,7 @@ export class AccountService {
   private accountsUrl: string;
  
   constructor(private http: HttpClient) {
-    this.accountsUrl = 'http://localhost:8080/API';
+    this.accountsUrl = 'http://zipbank.herokuapp.com/API';
   }
  
   public findAll(): Observable<Account[]> {

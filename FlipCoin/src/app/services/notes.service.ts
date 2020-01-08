@@ -13,7 +13,7 @@ export class NotesService {
 
   user: any = new User();
 
-  private url: string = "http://localhost:8080/user";
+  private url: string = "http://zipbank.herokuapp.com/user";
 
   constructor(
     private http:HttpClient, 

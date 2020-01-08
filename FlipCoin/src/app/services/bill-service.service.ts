@@ -14,7 +14,7 @@ export class BillService {
   private storedId:number;
 
   constructor(private http: HttpClient) {
-    this.accountsUrl = 'http://localhost:8080/API';
+    this.accountsUrl = 'http://zipbank.herokuapp.com/API';
   }
 
   public findAll(): Observable<BillComponent[]> {
