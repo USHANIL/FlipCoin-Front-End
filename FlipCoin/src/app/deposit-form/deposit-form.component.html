@@ -1,0 +1,23 @@
+<div class='container'>
+
+    <form [formGroup]="depositForm" (ngSubmit)="onSubmit();">
+        <br>
+        <br>
+        <h5>Select an account for deposit</h5>
+
+        <select class="form-control form-control-lg" formControlName="accountId">
+    
+            <option *ngFor="let account of accounts" [value]="account.accountNumber">{{account.accountName}}  ({{account.type}})
+            </option>
+        </select>
+
+        <div>
+            <label>Amount</label>
+            <input type="text" class="form-control" [value]=0 formControlName="amount">
+        </div>
+
+        <br>
+        <button class="btn btn-primary" [disabled]="!depositForm.valid">Submit</button>
+
+    </form>
+</div>

@@ -1,0 +1,11 @@
+.clicker {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.clicker:focus + .hiddendiv{
+    display:block;
+}

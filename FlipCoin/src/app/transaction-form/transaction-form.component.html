@@ -1,0 +1,21 @@
+<form [formGroup]="tForm" (ngSubmit)="onSubmit();">
+        <br>
+        <br>
+        <h5>Select an account for deposit</h5>
+    
+        <select class="form-control form-control-lg" formControlName="accountId">
+                
+            <option *ngFor="let account of accounts" [value]="account.accountNumber">{{account.accountName}}  ({{account.type}})
+            </option> 
+        </select>
+    
+        <div>
+            <label>Amount</label>
+            <input type="number" class="form-control" [value]="transaction.amount" formControlName="amount"> or
+            <label>Total Cost </label>
+        </div>
+    
+        <br>
+        <button class="btn btn-primary" [disabled]="!tForm.valid">Submit</button>
+    
+    </form>

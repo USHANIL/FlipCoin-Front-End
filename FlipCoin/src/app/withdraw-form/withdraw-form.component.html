@@ -1,0 +1,23 @@
+<div class='container'>
+
+    <form [formGroup]="withdrawForm" (ngSubmit)="onSubmit();">
+        <br>
+        <br>
+        <h5>Select an account for withdrawal</h5>
+
+        <select class="form-control form-control-lg" formControlName="accountId">
+        
+                <option *ngFor="let account of accounts" [value]="account.accountNumber">{{account.accountName}}  ({{account.type}})
+                </option>
+            </select>
+
+        <div>
+            <label>Amount</label>
+            <input type="text" class="form-control" [value]="" formControlName="amount" placeholder="0">
+        </div>
+
+        <br>
+        <button class="btn btn-primary" [disabled]="!withdrawForm.valid">Submit</button>
+
+    </form>
+</div>

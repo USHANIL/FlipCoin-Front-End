@@ -1,0 +1,50 @@
+<div class='container'>
+
+    <h1>List of Goals</h1>
+
+
+    <table class="table table-bordered lightgreen">
+        <thead>
+            <th>Create Note</th>
+        </thead>
+        <tr>
+            <td>
+                <form #it="ngForm" (ngSubmit)="saveNote()">
+                    <div class="form-group">
+                        <textarea class="form-control" type="text" rows="2" name="note" [(ngModel)]="newNote.note"
+                            #note="ngModel" placeholder="Type note here" required></textarea>
+                    </div>
+
+                    <button type="submit" [disabled]="!it.form.valid" class="btn btn-dark">Submit</button>
+                </form>
+            </td>
+        </tr>
+
+    </table>
+
+
+
+    <table class="table table-bordered">
+        <thead>
+            <th>Goal</th>
+            <th>Date</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let note of notes">
+                <td *ngIf="note.noteId === editRowId">
+                    <form #it="ngForm" (ngSubmit)="updateNote()">
+                        <input type="text" name="note" [(ngModel)]="updateTheNote.note" #note="ngModel">
+                        <button class="btn btn-sm " type="submit" style="font-size:12px">Update</button>
+                    </form>
+                </td>
+
+                <td *ngIf="note.noteId !== editRowId" (click)="Edit(note.noteId)">{{note.note}}</td>
+                <td>{{note.noteDate | date : 'mediumDate'}}</td>
+                <td class="deleteButton">
+                    <button class="btn btn-sm " (click)="deleteNote(note.noteId)" type="button"
+                        style="font-size:12px">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

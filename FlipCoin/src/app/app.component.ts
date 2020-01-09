@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthenticationService } from './services/authentication.service';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +10,14 @@ import { Component } from '@angular/core';
 
 
 export class AppComponent {
-  title:string;
+  title: string;
 
- constructor(){ this.title = 'FlipCoin';
-}
+  constructor(private router: Router, private authenticate: AuthenticationService) { }
+
+  displayDashboard() {
+    return this.authenticate.isUserLoggedIn();
+  }
+  displayPreLoginHeader() {
+    return this.authenticate.isUserLoggedIn();
+  }
 }

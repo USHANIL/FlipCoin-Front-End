@@ -1,0 +1,29 @@
+<div class="container">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" (click)="depositView()">Deposit</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" (click)="withdrawView()">Withdraw</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" (click)="transferView()">Transfer between Accounts</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" (click)="otherView()">Transfer to User</a>
+        </li>
+
+    </ul>
+</div>
+<div class="container" *ngIf="deposit === true">
+    <app-deposit-form></app-deposit-form>
+</div>
+<div class="container" *ngIf="withdraw === true">
+    <app-withdraw-form></app-withdraw-form>
+</div>
+<div class="container" *ngIf="transfer === true">
+    <app-transfer-form></app-transfer-form>
+</div>
+<div class="container" *ngIf="other === true">
+    <app-transfer-other></app-transfer-other>
+</div>

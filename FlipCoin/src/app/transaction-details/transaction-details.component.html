@@ -1,0 +1,26 @@
+<div class="container">
+
+  <body>
+    <h2>Transaction Details</h2> 
+
+    <hr/>
+    
+    <div *ngIf="transaction">
+      <div>
+        <label><b>Transaction ID: </b></label> {{transaction.transactionId}}
+      </div>
+      <div>
+        <label><b>Transaction Date: </b></label> {{transaction.transactionDate | date: 'MM/dd/yyyy'}}
+      </div>
+      <div>
+        <label><b>Description: </b></label> {{transaction.type}}
+      </div>  
+      <div>
+        <label><b>Amount: </b></label> ${{transaction.amount}}
+      </div> 
+    </div>
+
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Accounts</button><br>

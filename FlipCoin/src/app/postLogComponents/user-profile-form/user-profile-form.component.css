@@ -1,0 +1,32 @@
+button{
+    background-color: lightgrey;
+    color: black;
+}
+
+button:hover{
+    background-color: lightgrey;
+    color: #18d26e;
+}
+.container{
+    display: block;
+
+}
+th{
+    height: 50px;
+    text-align: center;
+    background-color: lightgrey;
+    color:  black;
+}
+
+table, th, td {
+    border-color:  #18d26e;
+}
+.deleteButton{
+    width: 50px;
+}
+h4{
+    text-align: center;
+}
+input{
+    border-color: #18d26e;
+}
